@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins'}
+
+body{background:#f1f3f8;color:#0b2140}
+
+.site-wrap{max-width:1100px;margin:24px auto;padding:20px}
+
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.topbar h1{font-size:20px;color:#0b2140}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 18px;
+    border: 1px solid #989898;
+}
+.card h3 {
+    margin-bottom: 8px;
+    color: #222;
+    font-weight: 600;
+    font-size: 18px;
+}
+.card p {
+    color: #454545;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.card .btn {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    background: #3BE138; /* default green - overridden by .rent */
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 18px;
+}
+
+.card .btn:active {
+    transform: translateY(1px);
+}
+
+.card .btn.rent {
+    background: #AC1616; /* red-ish for rentan */
+}
+
+.card .btn.safe {
+    background: #3BE138; /* green for safe */
+}
+
+.grid{display:grid;grid-template-columns:1fr;gap:18px}
+
+/* icons and status */
+.card .label{display:inline-flex;align-items:flex-start;gap:12px;margin-bottom:10px}
+.label .dot {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px; /* rounded square */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    transform: translateY(12px); /* raise icon box slightly */
+}
+.dot.rent {
+    background: #fff0f0; /* light red background */
+}
+.dot.safe {
+    background: #eaffef; /* light green background */
+}
+.label .dot img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+}
+
+@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+
+.breadcrumbs{color:#7a8793;margin-bottom:12px}
+.logout-container {
+    display: flex;
+    align-items: center;
+}
+
+.logout-btn {
+    padding: 8px 16px;
+    background: #AC1616;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.logout-btn:active {
+    background: #8f1212;
+    transform: translateY(1px);
+}
+
+

