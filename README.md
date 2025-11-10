@@ -1,5 +1,8 @@
 # Analisis Kerentanan Aplikasi Web
 Repositori ini berisi kode dan dokumentasi hasil praktikum yang berfokus pada analisis mendalam mengenai kerentanan keamanan aplikasi web modern. Proyek ini bertujuan untuk mendemonstrasikan perbedaan kritis antara implementasi kode yang rentan (Vulnerable) dan implementasi yang aman (Safe).
+# 🛡️ Web Security Lab: Analisis Kerentanan Aplikasi Web
+
+![Landing Page Praktikum Keamanan Web](Tampilan_Beranda1.png) 
 
 # Topik Utama yang Dianalisis 🚀 
 Praktikum ini mencakup empat materi :
