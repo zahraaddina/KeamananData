@@ -1,6 +1,5 @@
 # Analisis Kerentanan Aplikasi Web
 Repositori ini berisi kode dan dokumentasi hasil praktikum yang berfokus pada analisis mendalam mengenai kerentanan keamanan aplikasi web modern. Proyek ini bertujuan untuk mendemonstrasikan perbedaan kritis antara implementasi kode yang rentan (Vulnerable) dan implementasi yang aman (Safe).
-Tentu, berikut adalah draf kata-kata untuk file README.md GitHub Anda, yang dirancang khusus untuk proyek praktikum keamanan web Anda (SQLi, XSS, File Upload, BAC). Anda bisa menyalin dan menyesuaikannya.
 
 # Topik Utama yang Dianalisis 🚀 
 Praktikum ini mencakup empat materi :
