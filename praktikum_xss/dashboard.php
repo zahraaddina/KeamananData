@@ -122,7 +122,7 @@ $comments_count = is_null($stats['comments']) ? '—' : esc((string)$stats['comm
         display:flex;    
         flex-direction:column;    
         justify-content:space-between;
-        border: 1px solid #313131ff; /* Border tipis abu-abu */
+        border: 1px solid #9c9c9cff; /* Border tipis abu-abu */
     }
     .stat-content {
         display: flex;
@@ -173,7 +173,7 @@ $comments_count = is_null($stats['comments']) ? '—' : esc((string)$stats['comm
         padding: 20px;
         margin-bottom: 20px;
         box-shadow: none; /* Hapus bayangan */
-        border: 1px solid #313131ff; /* Border tipis abu-abu */
+        border: 1px solid #9c9c9cff; /* Border tipis abu-abu */
         display: flex;
         flex-direction: column;
         justify-content: space-between;

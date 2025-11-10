@@ -16,7 +16,7 @@ $user = $_SESSION['user'];
 
     <style>
         :root {
-            --color-primary: #b02a37; /* Merah untuk branding/rentan */
+            --color-primary: #AC1616; /* Merah untuk branding/rentan */
             --color-safe: #34c759;    /* Hijau untuk aman */
             --color-bg: #f8f9fa;      /* Background cerah */
         }
@@ -98,11 +98,11 @@ $user = $_SESSION['user'];
         }
         .access-card.vulnerable {
             border-left: 5px solid var(--color-primary);
-            border: 1px solid var(--color-primary);
+            border: 1px solid #bbbbbb
         }
         .access-card.safe {
             border-left: 5px solid var(--color-safe);
-            border: 1px solid var(--color-safe);
+            border: 1px solid #bbbbbb
         }
         .card-header-content {
             display: flex;

@@ -37,29 +37,147 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <!doctype html>
-<html>
+<html lang="id">
 <head>
-  <meta charset="utf-8">
-  <title>Login (Aman)</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding:20px; }
-    .box { max-width:420px; margin:auto; border:1px solid #ddd; padding:16px; border-radius:6px; }
-    input { width:100%; padding:8px; margin:6px 0; box-sizing:border-box; }
-    button { width:100%; padding:10px; }
-    .note { font-size:12px; color:gray; }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login (Aman)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container Card */
+        .box {
+            background-color: white;
+            max-width: 400px;
+            width: 90%;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Shadow ringan tetap dipertahankan untuk efek card */
+        }
+        
+        /* --- Icon Styling --- */
+        .top-icon-wrapper {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 10px auto; 
+            background-color: transparent;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: none; 
+        }
+
+        .top-icon-wrapper img {
+            width: 60px;
+            height: 60px;
+        }
+
+
+        .box h3 {
+            font-weight: 600;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        /* Form Elements */
+        form {
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #555;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        /* Fokus menggunakan warna AMAN (hijau) */
+        input:focus {
+            border-color: #3BE138; 
+            outline: none;
+        }
+
+        /* Button Styling - Menggunakan warna AMAN (hijau) */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3BE138; /* Warna tombol hijau */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.1s;
+        }
+        
+        button:active {
+            background-color: #33c233; /* Sedikit gelap saat diklik */
+        }
+        
+        /* Message Styling */
+        .message-error {
+            color: #AC1616; /* Warna merah untuk pesan error */
+            background-color: #fdd;
+            border: 1px solid #f00;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+    </style>
 </head>
 <body>
-  <div class="box">
-    <h3>Login — VERSI AMAN</h3>
-    <?php if ($message) echo "<p style='color:red;'>".htmlspecialchars($message)."</p>"; ?>
-    <form method="post" action="">
-        <label>Username</label><br>
-        <input name="username" required><br>
-        <label>Password</label><br>
-        <input name="password" type="password" required><br><br>
-        <button>Login</button>
-    </form>
-  </div>
+    <div class="box">
+        
+        <div class="top-icon-wrapper">
+            <img src="aman.png" alt="Icon Aman/Checklist"> 
+        </div>
+
+        <h3>LOGIN — VERSI AMAN</h3>
+
+        <?php if ($message) echo "<p class='message-error'>".htmlspecialchars($message)."</p>"; ?>
+        
+        <form method="post" action="">
+            <label>Username</label>
+            <input name="username" required>
+
+            <label>Password</label>
+            <input name="password" type="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
 </body>
 </html>

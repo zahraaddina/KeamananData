@@ -1,16 +1,19 @@
-/* Load Poppins from Google Fonts (keep this at the top) */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+/* Load Poppins from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
+
 
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
     line-height: 1.6;
+    background-color: #f8f9fa;
 }
 
 .container {
@@ -19,7 +22,8 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation */
+/* --- NAVIGATION STYLING --- */
+
 .navbar {
     background: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -46,10 +50,10 @@ body {
     height: 40px;
 }
 
-.nav-logo span {
-    font-size: 20px;
-    font-weight: 500; /* samakan dengan beranda */
-    color: #0066cc;
+.navbar .nav-logo span {
+    font-size: 22px;
+    font-weight: 700;
+    color: #AC1616;
 }
 
 .nav-menu {
@@ -67,21 +71,16 @@ body {
 
 .nav-menu a:hover,
 .nav-menu a.active {
-    color: #0066cc;
+    color: #AC1616;
 }
 
 
+/* -------------------- CONTENT STYLING -------------------- */
 
 .content {
     max-width: 1100px;
     margin: 50px auto;
     padding: 0 20px;
-}
-
-.content h1 {
-    text-align: center;
-    font-size: 26px;
-    margin-bottom: 40px;
 }
 
 /* Header wrapper with sparkle image */
@@ -91,12 +90,14 @@ body {
     align-items: center;
     gap: 12px;
     position: relative;
+    margin-bottom: 40px;
 }
 
 .page-header h1 {
-    margin: 90;
-    font-size: 28px;
+    margin: 0;
+    font-size: 32px;
     font-weight: 700;
+    color: #AC1616;
 }
 
 .sparkle {
@@ -106,13 +107,20 @@ body {
 }
 
 @media (max-width: 600px) {
-    .sparkle { width: 28px; transform: translateY(-4px); }
-    .page-header h1 { font-size: 22px; }
+    .sparkle {
+        width: 28px;
+        transform: translateY(-4px);
+    }
+
+    .page-header h1 {
+        font-size: 26px;
+    }
 }
 
+/* Topics Grid */
 .topics-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* exactly 2 cards per row on desktop */
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
 
@@ -121,9 +129,8 @@ body {
     border: 1.5px solid #c2c2c2;
     border-radius: 12px;
     padding: 25px 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     transition: 0.3s ease;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -134,12 +141,14 @@ body {
     flex-direction: column;
     align-items: left;
     text-align: left;
+    flex-grow: 1;
 }
 
 .icon-square {
     width: 70px;
     height: 70px;
-    background-color: #4297DA;
+    background-color: #AC1616;
+    /* Warna merah konsisten */
     border-radius: 14px;
     display: flex;
     align-items: center;
@@ -150,11 +159,12 @@ body {
 .icon-square img {
     width: 32px;
     height: 32px;
+    filter: invert(100%);
 }
 
 .topic-text h3 {
     font-size: 18px;
-    color: #0b5ed7;
+    color: #AC1616;
     margin-bottom: 10px;
     font-weight: 700;
 }
@@ -163,30 +173,30 @@ body {
     font-size: 14px;
     color: #555;
     line-height: 1.5;
-    max-width: 320px;
 }
 
+/* Button Styling (Sama dengan Beranda) */
 button {
-    background-color: #4297DA;
+    background-color: #AC1616;
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.15s ease;
-    font-family: 'Poppins', sans-serif; /* ensure button uses Poppins */
-    font-weight: 500;
+    transition: background 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     font-size: 14px;
 }
 
 button:hover {
-    background-color: #2d79b0;
+    background-color: #901212;
 }
 
 .card-footer {
     display: flex;
     justify-content: flex-end;
-    margin-top: auto; /* push footer to bottom of the card */
+    margin-top: 15px;
 }
 
 /* Responsive: single column on narrow screens */
@@ -194,9 +204,8 @@ button:hover {
     .topics-container {
         grid-template-columns: 1fr;
     }
-}
 
-/* utility: ensure headings use Poppins weights */
-h1, h2, h3, h4, h5 {
-    font-family: 'Poppins', sans-serif;
+    .topic-card {
+        padding: 25px;
+    }
 }
